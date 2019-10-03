@@ -1,0 +1,40 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!doctype html>
+
+<head>
+  <title>Mi Cliente de Twitter</title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static',
+  filename='style.css') }}">
+  <H1 align="right" style="background-color:rgb(89, 0, 255)">
+    {% if user %}
+    <a href="{{ url_for('logout') }}"><img src="{{url_for('static', filename='sign-out.png') }}" alt="sign out"></a>
+    {% else %}
+    <a href="{{ url_for('login') }}"><img src="{{url_for('static', filename='sign-in.png') }}" alt="sign in"></a>
+    {% endif %}
+
+    &nbsp;
+  </H1>
+</head>
+<hr>
+
+<body style="background-color:rgb(179, 152, 230)">
+  <h1><img src="http://icons.iconarchive.com/icons/graphics-vibe/simple-rounded-social/256/twitter-icon.png" width="40"
+      height="40" alt="TwitterIcon"> Cliente Twitter - Trabajo 1</h1>
+  <hr>
+  <div style="background-color: rgb(86, 212, 195)">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul class=flashes>
+      {% for category, message in messages %}
+      <li class="{{ category }}">{{ category }} {{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+  </div>
+
+
+  {% block body %}{% endblock %}
+</body>
+
+</html>
