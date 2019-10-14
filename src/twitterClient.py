@@ -18,12 +18,12 @@ twitter = oauth.remote_app('twitter',
     request_token_url='https://api.twitter.com/oauth/request_token',
     access_token_url='https://api.twitter.com/oauth/access_token',
     authorize_url='https://api.twitter.com/oauth/authenticate',
-    consumer_key='Yn8j64BqsI3VdWzyzLDFOfdoe',
-    consumer_secret='GYyd6D0PwuBmIMhMi3ycUkHpTBVbdlO6j7MSeDir2NW3iRXUTh'
+    consumer_key='',
+    consumer_secret=''
 )
 
-consumer_key = 'Yn8j64BqsI3VdWzyzLDFOfdoe'
-consumer_key_secret = 'GYyd6D0PwuBmIMhMi3ycUkHpTBVbdlO6j7MSeDir2NW3iRXUTh'
+consumer_key = ''
+consumer_key_secret = ''
 
 
 # Obtener token para esta sesion
